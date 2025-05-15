@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GraKosci.MainPage"
+    Title="Prosta Gra w Kości">
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Reroll" Clicked="OnReroll" />
+            <Button Text="Pass" Clicked="OnPass"/>
+            <Button Text="Restart" Clicked="OnRestart" />
+        </HorizontalStackLayout>
+
+        <Label Text="Kości Gracza 1" FontSize="Title"/>
+        <Grid x:Name="DiceGrid" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Label Text="Kości Gracza 2" FontSize="Title"/>
+        <Grid x:Name="DiceGridS" ColumnSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        <Label x:Name="Score1" Text="Punktacja Gracza 1: 0" FontSize="18"/>
+        <Label x:Name="Score2" Text="Punktacja Gracza 2: 0" FontSize="18"/>
+
+    </VerticalStackLayout>
+</ContentPage>

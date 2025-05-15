@@ -169,10 +169,20 @@ namespace GraKosci
             {
                 int val = kvp.Key;
                 int c = kvp.Value;
-                if (c == 5) score += 50;
-                else if (c == 4) score += val * 5;
-                else if (c == 3) score += val * 4;
-                else if (c == 2) score += val * 3;
+                switch (c)
+                {
+                    case 5: score += 50;
+                        break;
+                    case 4: score += val * 5;
+                        break;
+                    case 3: score += val * 4;
+                        break;
+                    case 2: score += val * 3;
+                        break;
+                        default: score += val * 2;
+                        break;
+                }
+              
             }
 
             score += v.Sum();
